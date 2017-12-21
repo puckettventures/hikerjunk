@@ -1,0 +1,303 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"geo",
+				"geoJson"
+			],
+			[
+				"adden",
+				"addendums"
+			],
+			[
+				"at",
+				"attatchment"
+			],
+			[
+				"attach",
+				"attatchments"
+			],
+			[
+				"retv",
+				"ret_val"
+			],
+			[
+				"last",
+				"lastaddendum"
+			],
+			[
+				"get_the",
+				"get_the_content"
+			],
+			[
+				"in",
+				"innerWidth"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"inner",
+				"innerHeight"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "hjserver/hikerjunkhost.js",
+			"settings":
+			{
+				"buffer_size": 2101,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 389.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git:b",
+				"git: branch"
+			],
+			[
+				"branch",
+				"git: branch"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 178.0,
+		"history":
+		[
+			"cls",
+			"clear"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/wolfbird/nodeSites/hikerjunk",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/node_modules",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/public"
+	],
+	"file_history":
+	[
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/node_modules/serve-index/public/style.css",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjserver/datastore/upload_cdc88793ca379962b313201c22f835f1.jpg",
+		"/Users/wolfbird/Downloads/ca_section_a_gps/CA_Sec_A_tracks.gpx",
+		"/Users/wolfbird/nodeSites/hikerjunk/public/manifest.json",
+		"/Users/wolfbird/nodeSites/hikerjunk/public/index.html",
+		"/Users/wolfbird/nodeSites/hikerjunk/hikerjunk.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hikerproject.js",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/lib/formatting-buttons/editor-plugin.js",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/js/jflickrfeed.js",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/lib/widgets/video/des_widget_video.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/lib/widgets/flickr/des_widget_flickr.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/lib/functions/javascript.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/js/jquery.tweet.js",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/functions/admin-shortcodes.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/functions/admin-functions.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/js/getProject.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/css/default.css",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/homeslider.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/home-flexslider.html",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/functions.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-config.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/header.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/style.css",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/proj-single.php",
+		"/Users/wolfbird/Sites/rockwellconst/wp-content/themes/freshlook/template-projects1.php",
+		"/Users/wolfbird/Downloads/puckettventures.sql",
+		"/Users/wolfbird/Downloads/puckettventures.wordpress.2017-11-06.xml",
+		"/Applications/MAMP/htdocs/rockwellconst/wp-content/themes/freshlook/functions/admin-shortcodes.php",
+		"/Users/wolfbird/Sites/puckettventures/wp-config.php",
+		"/Applications/MAMP/htdocs/canvas/index.html",
+		"/Applications/MAMP/htdocs/canvas/main.css",
+		"/Applications/MAMP/htdocs/canvas/thedrive.js",
+		"/Applications/MAMP/htdocs/rockwellconst/wp-content/themes/freshlook/header.php"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 110.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console",
+			"5a32c7e86a3eed36cb39d32a"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "hjserver/hikerjunkhost.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2101,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1796,
+								1796
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/Users/wolfbird/nodeSites",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 964.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "hikerjunk.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 308.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
