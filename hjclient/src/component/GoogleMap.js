@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-
-const SimpleReactComponent = ({ name, desc }) => (
-  <div className="map-info-box">
-    <div className="name">{name}</div>
-    <div className="desc">{desc}</div>
-  </div>
-);
+import MapInfoBox from "./MapInfoBox.js";
 
 export default class GoogleMap extends Component {
+  createMapOptions(maps) {
+    // next props are exposed at maps
+    // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
+    // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
+    // "DirectionsStatus", "DirectionsTravelMode", "DirectionsUnitSystem", "DistanceMatrixStatus",
+    // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
+    // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
+    return {
+    
+      mapTypeControlOptions: {
+        position: maps.ControlPosition.TOP_RIGHT
+      },
+      mapTypeControl: true
+    };
+  }
+
   static defaultProps = {
     center: { lat: 59.95, lng: 30.33 },
     zoom: 1,
@@ -25,10 +35,11 @@ export default class GoogleMap extends Component {
           key: "AIzaSyBTkQ-HVS6oELXofQbTX0aCv1t6TxUMPSA",
           language: "EN"
         }}
+        options={this.createMapOptions}
         onGoogleApiLoaded={this.props.onGoogleApiLoaded}
         yesIWantToUseGoogleMapApiInternals
       >
-        <SimpleReactComponent
+        <MapInfoBox
           lat={this.props.infoBox.lat}
           lng={this.props.infoBox.lng}
           name={this.props.infoBox.name}

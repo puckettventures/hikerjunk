@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import "semantic-ui-css/semantic.min.css";
 import MainMenu from "./component/MainMenu.js";
 import GoogleMap from "./component/GoogleMap.js";
 
@@ -60,17 +59,20 @@ class App extends Component {
 
     map.data.setStyle(feature => {
       // testing using different icons
+
+      let sym = feature.getProperty("sym");
       let desc = feature.getProperty("desc");
-      if (desc) {
-        return { icon: "./images/ic_pin_drop_black_24px.svg" };
-      }
+      if (sym && sym === "Water Source") {
+        return { icon: "./images/water-marker.svg" };
+      } else if (desc) {
+        return { icon: "./images/info-marker.svg" };
+      } else return { icon: "./images/named-marker.svg" };
     });
     try {
       map.data.addGeoJson(selected.data);
       this.zoom();
       map.data.addListener("click", item => {
-
-        // testing displaying info boxes with the item description and name 
+        // testing displaying info boxes with the item description and name
         let infoBox = new InfoBox(item);
         this.setState({ infoBox: infoBox });
       });
@@ -79,7 +81,6 @@ class App extends Component {
     }
   };
 
-  
   render() {
     return (
       <div className="App">
