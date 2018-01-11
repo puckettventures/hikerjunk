@@ -4,6 +4,110 @@
 		"selected_items":
 		[
 			[
+				"cons",
+				"console"
+			],
+			[
+				"logge",
+				"loggedIn"
+			],
+			[
+				"log",
+				"loggedIn"
+			],
+			[
+				"handl",
+				"handleFBLoginClick"
+			],
+			[
+				"face",
+				"FACEBOOK_APP_SECRET"
+			],
+			[
+				"F",
+				"FACEBOOK_APP_ID"
+			],
+			[
+				"But",
+				"buttonRef"
+			],
+			[
+				"button",
+				"buttonRef"
+			],
+			[
+				"e",
+				"extends"
+			],
+			[
+				"b",
+				"Button"
+			],
+			[
+				"ma",
+				"MapInfoBox"
+			],
+			[
+				"Map",
+				"MapInfoBox"
+			],
+			[
+				"info",
+				"InfoBox"
+			],
+			[
+				"proces",
+				"processPoints"
+			],
+			[
+				"layer",
+				"layerMonitor"
+			],
+			[
+				"onMap",
+				"onMapLayerLoaded"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"onMa",
+				"onMapLayerLoaded"
+			],
+			[
+				"lat",
+				"LatLng"
+			],
+			[
+				"get",
+				"getProperty"
+			],
+			[
+				"map",
+				"mapLoaded"
+			],
+			[
+				"we",
+				"WebSocket"
+			],
+			[
+				"Trails",
+				"TrailsDropdown"
+			],
+			[
+				"Trail",
+				"TrailsDropdown"
+			],
+			[
+				"cli",
+				"clients"
+			],
+			[
+				"db",
+				"dbUrl"
+			],
+			[
 				"geo",
 				"geoJson"
 			],
@@ -51,8 +155,25 @@
 			"file": "hjserver/hikerjunkhost.js",
 			"settings":
 			{
-				"buffer_size": 2101,
+				"buffer_size": 3789,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hjclient/src/component/MainMenu.js",
+			"settings":
+			{
+				"buffer_size": 2742,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hjclient/package.json",
+			"settings":
+			{
+				"buffer_size": 652,
 				"line_ending": "Unix"
 			}
 		}
@@ -64,10 +185,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 389.0,
-		"last_filter": "insta",
+		"height": 209.0,
+		"last_filter": "class",
 		"selected_items":
 		[
+			[
+				"class",
+				"Snippet: ES6 Class"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -79,19 +208,17 @@
 			[
 				"branch",
 				"git: branch"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			]
 		],
 		"width": 428.0
 	},
 	"console":
 	{
-		"height": 178.0,
+		"height": 310.0,
 		"history":
 		[
+			"cls",
+			"clear",
 			"cls",
 			"clear"
 		]
@@ -109,11 +236,30 @@
 	[
 		"/Users/wolfbird/nodeSites/hikerjunk",
 		"/Users/wolfbird/nodeSites/hikerjunk/hjclient",
-		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/node_modules",
-		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/public"
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/public",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjserver"
 	],
 	"file_history":
 	[
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/TrailsDropdown.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/package.json",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/public/index.html",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/App.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjserver/hikerjunkhost.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/MapInfoBox.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/MainMenu.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/GoogleMap.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/Polyline.js",
+		"/Users/wolfbird/Downloads/ca_section_a_gps/CA_Sec_A_waypoints.gpx",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/index.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/node_modules/react-dom/cjs/react-dom.development.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/node_modules/semantic-ui-react/dist/es/addons/Portal/Portal.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/MapContainer.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/ScriptCache.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/src/component/ButtonExampleButton.js",
+		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/component/ButtonExampleButton.js",
 		"/Users/wolfbird/nodeSites/hikerjunk/hjclient/node_modules/serve-index/public/style.css",
 		"/Users/wolfbird/nodeSites/hikerjunk/hjserver/datastore/upload_cdc88793ca379962b313201c22f835f1.jpg",
 		"/Users/wolfbird/Downloads/ca_section_a_gps/CA_Sec_A_tracks.gpx",
@@ -157,6 +303,7 @@
 		"height": 110.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -164,6 +311,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"3001",
+			"use",
+			"session",
+			"onMapImported",
+			"console.lg",
+			"console.log",
+			"Water Source",
+			"water source",
+			"spring",
+			"Flag, Green",
+			"sym",
+			"water",
+			"AIzaSyBxPrY1SD9Ol9gYJpN91U",
+			" \",",
+			"ws",
+			"url",
+			"http",
 			"console",
 			"5a32c7e86a3eed36cb39d32a"
 		],
@@ -183,7 +347,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -192,27 +356,90 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2101,
+						"buffer_size": 3789,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1796,
-								1796
+								581,
+								584
 							]
 						],
 						"settings":
 						{
-							"git_savvy.repo_path": "/Users/wolfbird/nodeSites",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"git_savvy.repo_path": "/Users/wolfbird/nodeSites/hikerjunk",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 964.0,
+						"translation.y": 454.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "hjclient/src/component/MainMenu.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2415,
+								2415
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/Users/wolfbird/nodeSites/hikerjunk",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1162.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "hjclient/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								555,
+								555
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/Users/wolfbird/nodeSites/hikerjunk",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -249,6 +476,14 @@
 		]
 	},
 	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 144.0
+	},
+	"output.exec":
+	{
+		"height": 144.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0

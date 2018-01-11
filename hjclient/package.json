@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "google-map-react": "^0.25.0",
+    "mapbox-gl": "^0.43.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "semantic-ui-css": "^2.2.12",
@@ -19,7 +21,16 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001",
+      "ws": true
+    },
+    "/auth": {
+      "target": "http://localhost:3001",
+      "ws": true
+    }
+  },
   "devDependencies": {
     "redux-devtools": "^3.4.1"
   }
