@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import MainMenu from "./component/MainMenu.js";
 import GoogleMap from "./component/GoogleMap.js";
+import MapBox  from "./component/MapBox.js";
 
 
     
@@ -100,6 +101,7 @@ class App extends Component {
           }}
           infoBox={this.state.infoBox}
         />
+        <MapBox />
       </div>
     );
   }
