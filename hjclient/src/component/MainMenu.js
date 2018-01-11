@@ -1,18 +1,22 @@
 import React, { Component } from "react";
-import { Input, Menu, Dropdown } from "semantic-ui-react";
+import { Input, Menu, Dropdown, Button, Icon } from "semantic-ui-react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 export default class MainMenu extends Component {
   state = { activeItem: "home", trails: [] };
 
   componentDidMount() {
-    fetch("/trails")
+    // Get all of the stored trails using the trails rest call
+    fetch("/api/trails")
       .then(res => res.json())
       .then(trails =>
         this.setState({ activeItem: this.state.activeItem, trails })
       );
+
+    // open a web socket to know when there is a new or updated trail
     this.ws = new WebSocket("ws://localhost:2222/");
     this.ws.onmessage = e => {
-      fetch("/trails")
+      fetch("/api/trails")
         .then(res => res.json())
         .then(trails =>
           this.setState({ activeItem: this.state.activeItem, trails })
@@ -22,25 +26,39 @@ export default class MainMenu extends Component {
       console.log("error with websocket");
       console.error(e);
     };
-  }
+  } // end of componentDidMount()
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   handleMapClick = (e, o) => {
     let id = o.value;
-    fetch("/trails/" + id)
+    fetch("/api/trails/" + id)
       .then(res => res.json())
       .then(trail => {
         this.setState({
           activeItem: this.state.activeItem,
           activeTrail: trail[0]
         });
-        
+
         this.props.onMapChange(trail[0]);
 
         console.log(trail[0]);
       });
   };
 
+  handleFBLoginClick = (e, o) => {
+    /*window.FB.getLoginStatus(function(response) {
+      if (response.status === "connected") {
+        console.log("Logged in.");
+      } else {
+        window.FB.login();
+        console.log("Attempting login.");
+      }
+    }); */
+
+    fetch("/api/health-check", {
+      mode: "cors"
+    }).then(res => console.log(res));
+  };
 
   render() {
     const { activeItem } = this.state;
@@ -48,11 +66,6 @@ export default class MainMenu extends Component {
     return (
       <div>
         <Menu pointing>
-          <Menu.Item
-            name="home"
-            active={activeItem === "home" ? true : ""}
-            onClick={this.handleItemClick}
-          />
           <Menu.Menu
             name="trails"
             active={activeItem === "trails" ? true : ""}
@@ -72,6 +85,8 @@ export default class MainMenu extends Component {
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Menu>
+          <a href="/auth/facebook">login</a>
+          <Button onClick={this.handleFBLoginClick}>clicked </Button>
           <Menu.Menu position="right">
             <Menu.Item>
               <Input icon="search" placeholder="Search..." />

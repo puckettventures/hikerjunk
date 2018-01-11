@@ -7,12 +7,12 @@ export default class TrailsDropdown extends Component {
 	state = { trails: [] };
 
 	componentDidMount() {
-		fetch("/trails")
+		fetch("/api/trails")
 			.then(res => res.json())
 			.then(trailss => this.setState({ trailss }));
 		this.ws = new WebSocket("ws://localhost:2222/");
 		this.ws.onmessage = e => {
-			fetch("/trails")
+			fetch("/api/trails")
 				.then(res => res.json())
 				.then(trailss => this.setState({ trailss }));
 		};

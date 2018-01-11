@@ -3,6 +3,9 @@ import "./App.css";
 import MainMenu from "./component/MainMenu.js";
 import GoogleMap from "./component/GoogleMap.js";
 
+
+    
+
 class InfoBox {
   constructor(item) {
     this.lat = item.latLng.lat();
