@@ -49,7 +49,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-
+// verify that the passthrough is working correctly in the dev env.
 app.get("/api/health-check", function(req, res) {
 	res.status(200);
 	res.send("Healthy API");

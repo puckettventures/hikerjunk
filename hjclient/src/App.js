@@ -21,7 +21,7 @@ class InfoBox {
 }
 
 class App extends Component {
-  state = { mapLoaded: false };
+  state = { mapLoaded: false, geoLayer: null };
 
   /**
    * Process each point in a Geometry, regardless of how deep the points may lie.
@@ -73,6 +73,7 @@ class App extends Component {
       } else return { icon: "./images/named-marker.svg" };
     });
     try {
+      this.setState({geoLayer: selected.data});
       map.data.addGeoJson(selected.data);
       this.zoom();
       map.data.addListener("click", item => {
@@ -101,7 +102,7 @@ class App extends Component {
           }}
           infoBox={this.state.infoBox}
         />
-        <MapBox />
+       
       </div>
     );
   }

@@ -11,7 +11,6 @@ export default class GoogleMap extends Component {
     // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
     // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
     return {
-    
       mapTypeControlOptions: {
         position: maps.ControlPosition.TOP_RIGHT
       },
@@ -29,7 +28,7 @@ export default class GoogleMap extends Component {
     return (
       <GoogleMapReact
         defaultCenter={this.props.center}
-        style={{ height: "100px", position: "relative" }}
+        style={{ height: "90vh", position: "relative" }}
         defaultZoom={this.props.zoom}
         bootstrapURLKeys={{
           key: "AIzaSyBTkQ-HVS6oELXofQbTX0aCv1t6TxUMPSA",
@@ -39,12 +38,14 @@ export default class GoogleMap extends Component {
         onGoogleApiLoaded={this.props.onGoogleApiLoaded}
         yesIWantToUseGoogleMapApiInternals
       >
-        <MapInfoBox
-          lat={this.props.infoBox.lat}
-          lng={this.props.infoBox.lng}
-          name={this.props.infoBox.name}
-          desc={this.props.infoBox.desc}
-        />
+        {this.props.infoBox.name ? (
+          <MapInfoBox
+            lat={this.props.infoBox.lat}
+            lng={this.props.infoBox.lng}
+            name={this.props.infoBox.name}
+            desc={this.props.infoBox.desc}
+          />
+        ) : null}
       </GoogleMapReact>
     );
   }
