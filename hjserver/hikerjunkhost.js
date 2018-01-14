@@ -55,6 +55,7 @@ app.get("/api/health-check", function(req, res) {
 	res.send("Healthy API");
 });
 
+
 //app authentication using passport-facebook
 app.get("/auth/facebook", passportFacebook.authenticate("facebook"));
 
@@ -63,7 +64,8 @@ app.get(
 	passportFacebook.authenticate("facebook", { failureRedirect: "/login" }),
 	function(req, res) {
 		// Successful authentication, redirect home.
-		res.redirect("/");
+		console.log(req.user);
+		 res.redirect('/user/' + req.user.doc._id) + '/';
 	}
 );
 
@@ -85,6 +87,25 @@ wss.on("connection", socket => {
 });
 
 wss.on("error", err => console.error(err));
+
+
+app.get("/api/user/:userId", (req, res) => {
+	MongoClient.connect(url, function(err, client) {
+		if (err) throw err;
+		let query = { _id: ObjectId(req.params["userId"]) };
+		console.log(query);
+		let db = client.db("hikerjunk");
+
+		db
+			.collection("users")
+			.find(query)
+			.toArray(function(err, result) {
+				if (err) throw err;
+				res.send(result);
+				//db.close();
+			});
+	});
+});
 
 app.get("/api/trails", (req, res) => {
 	MongoClient.connect(url, function(err, client) {

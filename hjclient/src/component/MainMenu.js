@@ -1,11 +1,34 @@
 import React, { Component } from "react";
 import { Input, Menu, Dropdown, Button, Icon } from "semantic-ui-react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default class MainMenu extends Component {
-  state = { activeItem: "home", trails: [] };
+  handleOnClick = (e, data) => {
+    // some action...
+    // then redirect
+
+    switch (data.color) {
+      case "facebook":
+        this.setState({ redirect: true, url: "/auth/facebook" });
+        break;
+    }
+  };
+
+  componentWillMount() {
+    this.setState({ activeItem: "home", trails: [], redirect: false }); // redirect used to check for view navigation from buttons
+  }
 
   componentDidMount() {
+    if (this.props.user) {
+      //user has logged in
+      fetch("/api/user/" + this.props.user)
+        .then(res => res.json())
+        .then(user => {
+          console.log(user);
+          console.log("user");
+          this.setState({ user: user[0] });
+        });
+    }
     // Get all of the stored trails using the trails rest call
     fetch("/api/trails")
       .then(res => res.json())
@@ -45,22 +68,15 @@ export default class MainMenu extends Component {
       });
   };
 
-  handleFBLoginClick = (e, o) => {
-    /*window.FB.getLoginStatus(function(response) {
-      if (response.status === "connected") {
-        console.log("Logged in.");
-      } else {
-        window.FB.login();
-        console.log("Attempting login.");
-      }
-    }); */
-
-    fetch("/api/health-check", {
-      mode: "cors"
-    }).then(res => console.log(res));
+  handleLoginClick = (e, data) => {
+    this.setState({ redirect: true, url: "/login" });
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to={this.state.url} />;
+    }
+
     const { activeItem } = this.state;
 
     return (
@@ -85,11 +101,17 @@ export default class MainMenu extends Component {
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Menu>
-          <a href="/auth/facebook">login</a>
-          <Button onClick={this.handleFBLoginClick}>clicked </Button>
           <Menu.Menu position="right">
             <Menu.Item>
               <Input icon="search" placeholder="Search..." />
+            </Menu.Item>
+            <Menu.Item>
+              {this.state.user &&
+              this.state.user.name ? (
+                <div>Welcome {this.state.user.name} <Link to="logout/">Logout</Link></div>
+              ) : (
+                <Button onClick={this.handleLoginClick}>Login</Button>
+              )}
             </Menu.Item>
           </Menu.Menu>
         </Menu>

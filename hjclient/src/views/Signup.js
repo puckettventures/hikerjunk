@@ -14,7 +14,7 @@ import { Redirect, Link } from "react-router-dom";
 // Taken directly from https://github.com/Semantic-Org/Semantic-UI-React/blob/master/docs/app/Layouts/LoginLayout.js
 // With modifications..
 
-export default class Login extends Component {
+export default class Signup extends Component {
 	handleOnClick = (e, data) => {
 		
 
@@ -70,19 +70,32 @@ export default class Login extends Component {
 								/>
 								<Form.Input
 									fluid
+									icon="user"
+									iconPosition="left"
+									placeholder="Trail Name"
+								/>
+								<Form.Input
+									fluid
 									icon="lock"
 									iconPosition="left"
 									placeholder="Password"
 									type="password"
 								/>
+								<Form.Input
+									fluid
+									icon="lock"
+									iconPosition="left"
+									placeholder="Confirm Password"
+									type="password"
+								/>
 
 								<Button color="teal" fluid size="large">
-									Login
+									Sign Up
 								</Button>
 							</Segment>
 						</Form>
 						<Message>
-							New to us? <Link to="/signup">Sign Up</Link>
+							Already have an account? <Link to="/login">Sign In</Link>
 							<div className="social-login">
 								<Button color="facebook" fluid onClick={this.handleOnClick}>
 									<Icon name="facebook" /> Sign Up with

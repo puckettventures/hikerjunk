@@ -87,9 +87,17 @@ class Main extends Component {
   };
 
   render() {
+    let user = "";
+    let match = this.props.match;
+    if(this.props.match) console.log("match");
+    if(match && match.params && match.params.userId)
+    {
+      user = match.params.userId;
+    }
+
     return (
       <div className="App">
-        <MainMenu onMapChange={this.handleMapChange} />
+        <MainMenu onMapChange={this.handleMapChange} user={user} />
         <GoogleMap
           onGoogleApiLoaded={({ map, maps }) => {
             this.setState({
