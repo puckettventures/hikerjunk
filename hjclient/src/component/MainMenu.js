@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Input, Menu, Dropdown, Button, Icon } from "semantic-ui-react";
 import { Redirect, Link } from "react-router-dom";
+import ProfileDropDown from "./ProfileDropDown.js";
 
 export default class MainMenu extends Component {
   handleOnClick = (e, data) => {
@@ -102,17 +103,17 @@ export default class MainMenu extends Component {
             </Dropdown>
           </Menu.Menu>
           <Menu.Menu position="right">
+
+              
+            
             <Menu.Item>
               <Input icon="search" placeholder="Search..." />
             </Menu.Item>
-            <Menu.Item>
-              {this.state.user &&
-              this.state.user.name ? (
-                <div>Welcome {this.state.user.name} <Link to="logout/">Logout</Link></div>
+            {this.state.user && this.state.user.name ? (
+                <ProfileDropDown UserName={this.state.user.name} />
               ) : (
-                <Button onClick={this.handleLoginClick}>Login</Button>
+                <Menu.Item><Button onClick={this.handleLoginClick}>Login</Button></Menu.Item>
               )}
-            </Menu.Item>
           </Menu.Menu>
         </Menu>
       </div>
